@@ -2,26 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
+body,
+html {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100vh;
 }
+
+/* styles/globals.css or equivalent */
+
+/* Tailwind DatePicker Styles */
+
+
+.tailwind-datepicker .react-datepicker__header {
+  background-color: white !important;
+  font-weight: bold;
+  border-bottom: 0 !important;
+
+}
+
+.tailwind-datepicker .react-datepicker__day-name,
+.tailwind-datepicker .react-datepicker__day,
+.tailwind-datepicker .react-datepicker__time-name {
+  color: #4a5568 !important; /* Tailwind gray-700 */
+
+
+}
+
+.tailwind-datepicker .react-datepicker__day--selected,
+.tailwind-datepicker .react-datepicker__day--keyboard-selected {
+  background-color: #4299e1 !important; /* Tailwind blue-500 */
+  color: white !important;
+
+}
+
+.tailwind-datepicker .react-datepicker__navigation {
+  top: 1rem !important;
+
+}
+
+
